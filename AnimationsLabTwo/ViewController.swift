@@ -117,8 +117,17 @@ class ViewController: UIViewController {
   
   @objc func animateButtonPressed() {
     UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: {
-      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2.0) {
+      UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 3.0) {
         self.ballOne.transform = CGAffineTransform(translationX: 0, y: 620)
+      }
+      UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 3.0) {
+        self.ballTwo.transform = CGAffineTransform(translationX: 0, y: 620)
+      }
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2.0) {
+        self.ballThree.transform = CGAffineTransform(translationX: 0, y: 620)
+      }
+      UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 2.5) {
+        self.ballFour.transform = CGAffineTransform(translationX: 0, y: 620)
       }
     }, completion: nil)
   }
