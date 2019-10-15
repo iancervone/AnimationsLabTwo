@@ -117,10 +117,10 @@ class ViewController: UIViewController {
   
   @objc func animateButtonPressed() {
     UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: {
-      UIView.addKeyframe(withRelativeStartTime: 0.1, relativeDuration: 3.0) {
+      UIView.addKeyframe(withRelativeStartTime: 0.05, relativeDuration: 3.0) {
         self.ballOne.transform = CGAffineTransform(translationX: 0, y: 620)
       }
-      UIView.addKeyframe(withRelativeStartTime: 0.3, relativeDuration: 3.0) {
+      UIView.addKeyframe(withRelativeStartTime: 0.15, relativeDuration: 3.0) {
         self.ballTwo.transform = CGAffineTransform(translationX: 0, y: 620)
       }
       UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2.0) {
@@ -151,19 +151,35 @@ class ViewController: UIViewController {
   
   
   @objc func linearButtonPressed() {
-  
+    if self.ballOne.alpha == 1.0 {
+         self.ballOne.alpha = 0.0
+       } else {
+         self.ballOne.alpha = 1.0
+       }
   }
   
   @objc func easeInButtonPressed() {
-    
+    if self.ballTwo.alpha == 1.0 {
+      self.ballTwo.alpha = 0.0
+    } else {
+      self.ballTwo.alpha = 1.0
+    }
   }
   
   @objc func easeOutButtonPressed() {
-    
+    if self.ballThree.alpha == 1.0 {
+      self.ballThree.alpha = 0.0
+    } else {
+      self.ballThree.alpha = 1.0
+    }
   }
   
   @objc func easeInAndOutButtonPressed() {
-    
+    if self.ballFour.alpha == 1.0 {
+      self.ballFour.alpha = 0.0
+    } else {
+      self.ballFour.alpha = 1.0
+    }
   }
   
   
