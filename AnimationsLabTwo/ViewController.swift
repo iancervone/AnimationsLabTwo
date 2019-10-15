@@ -87,6 +87,7 @@ class ViewController: UIViewController {
   let button = UIButton()
     button.setTitle("Reset", for: .normal)
     button.addTarget(self, action: #selector(resetButtonPressed), for: .touchUpInside)
+    button.backgroundColor = .black
     return button
   }()
   
@@ -100,6 +101,7 @@ class ViewController: UIViewController {
     self.view.addSubview(easeOutButton)
     self.view.addSubview(easeInAndOutButton)
     self.view.addSubview(animateButton)
+    self.view.addSubview(resetButton)
   }
   
   override func viewDidLoad() {
@@ -151,6 +153,7 @@ class ViewController: UIViewController {
     easeOutButtonConstraints()
     easeInAndOutButtonConstraints()
     animateButtonConstraints()
+    resetButtonConstraints()
   }
   
   private func ballOneConstraints() {
@@ -193,8 +196,7 @@ class ViewController: UIViewController {
     ])
   }
   
-  
-  private func linearButtonConstraints() {
+    private func linearButtonConstraints() {
      linearButton.translatesAutoresizingMaskIntoConstraints = false
      NSLayoutConstraint.activate([
           linearButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 50),
@@ -224,7 +226,6 @@ class ViewController: UIViewController {
     ])
   }
   
-  
   private func easeInAndOutButtonConstraints() {
      easeInAndOutButton.translatesAutoresizingMaskIntoConstraints = false
      NSLayoutConstraint.activate([
@@ -234,7 +235,6 @@ class ViewController: UIViewController {
        easeInAndOutButton.heightAnchor.constraint(equalToConstant: 30)
      ])
    }
-  
   
   private func animateButtonConstraints() {
     animateButton.translatesAutoresizingMaskIntoConstraints = false
@@ -246,6 +246,15 @@ class ViewController: UIViewController {
     ])
   }
   
+  private func resetButtonConstraints() {
+    resetButton.translatesAutoresizingMaskIntoConstraints = false
+    NSLayoutConstraint.activate([
+      resetButton.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -50),
+      resetButton.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: -28),
+      resetButton.widthAnchor.constraint(equalToConstant: 77),
+      resetButton.heightAnchor.constraint(equalToConstant: 30)
+    ])
+  }
   
 }
 
