@@ -124,7 +124,11 @@ class ViewController: UIViewController {
   }
   
   @objc func resetButtonPressed() {
-    // code to reset balls
+    UIView.animateKeyframes(withDuration: 0.0, delay: 0.0, options: [], animations: {
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+        self.ballOne.transform = CGAffineTransform(translationX: 0, y: 0)
+      }
+    }, completion: nil)
   }
   
   
