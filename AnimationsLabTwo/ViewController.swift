@@ -116,7 +116,11 @@ class ViewController: UIViewController {
   //BUTTON FUNCTIONS
   
   @objc func animateButtonPressed() {
-    //code to drop balls
+    UIView.animateKeyframes(withDuration: 3.0, delay: 0.0, options: [], animations: {
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 2.0) {
+        self.ballOne.transform = CGAffineTransform(translationX: 0, y: 620)
+      }
+    }, completion: nil)
   }
   
   @objc func resetButtonPressed() {
