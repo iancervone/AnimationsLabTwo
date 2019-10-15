@@ -137,6 +137,15 @@ class ViewController: UIViewController {
       UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
         self.ballOne.transform = CGAffineTransform(translationX: 0, y: 0)
       }
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+        self.ballTwo.transform = CGAffineTransform(translationX: 0, y: 0)
+      }
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+        self.ballThree.transform = CGAffineTransform(translationX: 0, y: 0)
+      }
+      UIView.addKeyframe(withRelativeStartTime: 0.0, relativeDuration: 0.0) {
+        self.ballFour.transform = CGAffineTransform(translationX: 0, y: 0)
+      }
     }, completion: nil)
   }
   
